@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Production build output
+dist/
+dist-ssr/
+
+# Local environment files
+*.local
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Large raw video media files (3.6 GB total, 15 files > 100MB exceed GitHub file limit)
+VIDEOS/
+public/VIDEOS
+*.mp4
+*.mov
+*.mkv
+*.webm
+
+# Temporary build & scratch files
+scratch/
+.system_generated/
