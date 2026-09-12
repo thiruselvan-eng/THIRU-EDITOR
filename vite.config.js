@@ -20,7 +20,7 @@ export default defineConfig({
             
             if (decodedUrl.startsWith('/VIDEOS/') || decodedUrl.startsWith('/videos/')) {
               const subPath = decodedUrl.replace(/^\/(VIDEOS|videos)\//i, '')
-              const filePath = path.resolve(__dirname, 'VIDEOS', subPath)
+              const filePath = path.resolve(__dirname, 'public', 'VIDEOS', subPath)
               
               if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
                 const stat = fs.statSync(filePath)

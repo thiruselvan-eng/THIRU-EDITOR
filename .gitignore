@@ -23,12 +23,14 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 
-# Large raw video media files (3.6 GB total, 15 files > 100MB exceed GitHub file limit)
+# Large video media files (kept locally on computer, ignored from Git)
 VIDEOS/
-public/VIDEOS
+public/VIDEOS/
+ORIGINAL_RAW_VIDEOS/
 *.mp4
 *.mov
 *.mkv
+*.avi
 *.webm
 
 # Temporary build & scratch files
