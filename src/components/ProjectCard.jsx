@@ -1,69 +1,35 @@
-import React, { useState, useRef } from 'react';
-import { Play, Clock, Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
+import { Play, Clock } from 'lucide-react';
+import AutoplayVideo from './AutoplayVideo';
 
 export default function ProjectCard({ project, onOpenModal }) {
   const [isHovered, setIsHovered] = useState(false);
-  const hoverVideoRef = useRef(null);
-  const hoverTimeoutRef = useRef(null);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    // Delay video start slightly for performance so fast cursor passes don't trigger loading
-    hoverTimeoutRef.current = setTimeout(() => {
-      if (hoverVideoRef.current) {
-        hoverVideoRef.current.currentTime = 0;
-        hoverVideoRef.current.play().catch(() => {});
-      }
-    }, 250);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
-    if (hoverVideoRef.current) {
-      hoverVideoRef.current.pause();
-    }
-  };
-
   const isVertical = project.orientation === 'vertical';
 
   return (
     <div
       onClick={() => onOpenModal(project)}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       className={`group relative rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 border border-white/10 hover:border-accent-gold/60 hover:shadow-2xl hover:shadow-accent-gold/10 hover:-translate-y-1.5 flex flex-col justify-end bg-cinema-900 ${
         isVertical ? 'aspect-[9/16]' : 'aspect-video'
       }`}
     >
-      {/* Poster Image */}
-      <img
-        src={project.posterUrl}
-        alt={project.title}
-        loading="lazy"
-        className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${
-          isHovered ? 'opacity-0' : 'opacity-100'
-        }`}
-      />
-
-      {/* Hover Preview Video (Lazy played on hover) */}
-      <video
-        ref={hoverVideoRef}
+      {/* Autoplay Video with IntersectionObserver */}
+      <AutoplayVideo
         src={project.videoUrl}
-        muted
-        loop
-        playsInline
-        preload="none"
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none ${
-          isHovered ? 'opacity-100' : 'opacity-0'
-        }`}
+        poster={project.posterUrl}
+        alt={project.title}
+        isHovered={isHovered}
+        imgClassName="group-hover:scale-105"
+        videoClassName="group-hover:scale-105"
       />
 
       {/* Dark Vignette & Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-t from-cinema-950 via-cinema-950/40 to-transparent opacity-90 group-hover:opacity-95 transition-opacity" />
+      <div className="absolute inset-0 bg-gradient-to-t from-cinema-950 via-cinema-950/40 to-transparent opacity-90 group-hover:opacity-95 transition-opacity pointer-events-none" />
 
       {/* Top Badges */}
-      <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
+      <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10 pointer-events-none">
         <span className="px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-black/60 backdrop-blur-md text-accent-gold border border-white/10">
           {project.categoryLabel || project.category}
         </span>
@@ -79,7 +45,7 @@ export default function ProjectCard({ project, onOpenModal }) {
       </div>
 
       {/* Bottom Content Info */}
-      <div className="relative z-10 p-4 sm:p-5 flex flex-col justify-end">
+      <div className="relative z-10 p-4 sm:p-5 flex flex-col justify-end pointer-events-none">
         <h3 className="text-sm sm:text-base font-display font-bold text-white group-hover:text-accent-gold transition-colors line-clamp-2 leading-snug">
           {project.title}
         </h3>

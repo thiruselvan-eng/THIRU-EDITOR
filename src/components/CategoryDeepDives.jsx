@@ -1,5 +1,6 @@
 import React from 'react';
 import { Play, TrendingUp, Megaphone, Calendar, Wand2, ArrowRight } from 'lucide-react';
+import AutoplayVideo from './AutoplayVideo';
 
 export default function CategoryDeepDives({ projects, onOpenModal }) {
   // Extract key sample projects for each deep dive
@@ -56,15 +57,16 @@ export default function CategoryDeepDives({ projects, onOpenModal }) {
                 <div
                   key={p.id}
                   onClick={() => onOpenModal(p)}
-                  className="group relative aspect-[9/16] rounded-2xl overflow-hidden cursor-pointer border border-white/10 hover:border-accent-gold/60 transition-all hover:scale-102"
+                  className="group relative aspect-[9/16] rounded-2xl overflow-hidden cursor-pointer border border-white/10 hover:border-accent-gold/60 transition-all hover:scale-102 bg-cinema-900"
                 >
-                  <img
-                    src={p.posterUrl}
+                  <AutoplayVideo
+                    src={p.videoUrl}
+                    poster={p.posterUrl}
                     alt={p.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    imgClassName="group-hover:scale-105"
+                    videoClassName="group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-3">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-3 pointer-events-none">
                     <span className="text-[10px] font-mono text-accent-gold truncate">
                       {p.duration}
                     </span>
@@ -72,7 +74,7 @@ export default function CategoryDeepDives({ projects, onOpenModal }) {
                       {p.title}
                     </h4>
                   </div>
-                  <div className="absolute inset-0 m-auto w-10 h-10 rounded-full bg-accent-gold text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="absolute inset-0 m-auto w-10 h-10 rounded-full bg-accent-gold text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                     <Play className="w-4 h-4 fill-current ml-0.5" />
                   </div>
                 </div>
@@ -108,13 +110,14 @@ export default function CategoryDeepDives({ projects, onOpenModal }) {
                 onClick={() => onOpenModal(p)}
                 className="group relative aspect-[9/16] max-h-[480px] rounded-2xl overflow-hidden cursor-pointer border border-white/10 hover:border-accent-cyan/60 transition-all hover:scale-102 bg-cinema-900"
               >
-                <img
-                  src={p.posterUrl}
+                <AutoplayVideo
+                  src={p.videoUrl}
+                  poster={p.posterUrl}
                   alt={p.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  imgClassName="group-hover:scale-105"
+                  videoClassName="group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-5">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-5 pointer-events-none">
                   <span className="text-[10px] font-mono text-accent-cyan mb-1">
                     CAMPAIGN REEL • {p.duration}
                   </span>
@@ -125,7 +128,7 @@ export default function CategoryDeepDives({ projects, onOpenModal }) {
                     {p.description}
                   </p>
                 </div>
-                <div className="absolute inset-0 m-auto w-12 h-12 rounded-full bg-accent-cyan text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
+                <div className="absolute inset-0 m-auto w-12 h-12 rounded-full bg-accent-cyan text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-lg pointer-events-none">
                   <Play className="w-5 h-5 fill-current ml-0.5" />
                 </div>
               </div>
@@ -159,13 +162,14 @@ export default function CategoryDeepDives({ projects, onOpenModal }) {
                 onClick={() => onOpenModal(p)}
                 className="group relative aspect-[9/16] max-h-[480px] rounded-2xl overflow-hidden cursor-pointer border border-white/10 hover:border-accent-gold/60 transition-all hover:scale-102 bg-cinema-900"
               >
-                <img
-                  src={p.posterUrl}
+                <AutoplayVideo
+                  src={p.videoUrl}
+                  poster={p.posterUrl}
                   alt={p.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  imgClassName="group-hover:scale-105"
+                  videoClassName="group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-5">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-5 pointer-events-none">
                   <span className="text-[10px] font-mono text-accent-gold mb-1">
                     ANAND DECOR LUXURY HIGHLIGHT • {p.duration}
                   </span>
@@ -176,7 +180,7 @@ export default function CategoryDeepDives({ projects, onOpenModal }) {
                     {p.description}
                   </p>
                 </div>
-                <div className="absolute inset-0 m-auto w-12 h-12 rounded-full bg-accent-gold text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
+                <div className="absolute inset-0 m-auto w-12 h-12 rounded-full bg-accent-gold text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-lg pointer-events-none">
                   <Play className="w-5 h-5 fill-current ml-0.5" />
                 </div>
               </div>
@@ -197,13 +201,14 @@ export default function CategoryDeepDives({ projects, onOpenModal }) {
                   onClick={() => onOpenModal(p)}
                   className="group relative aspect-video rounded-3xl overflow-hidden cursor-pointer border border-white/15 hover:border-accent-gold/60 transition-all shadow-2xl bg-black"
                 >
-                  <img
-                    src={p.posterUrl}
+                  <AutoplayVideo
+                    src={p.videoUrl}
+                    poster={p.posterUrl}
                     alt={p.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    imgClassName="group-hover:scale-105"
+                    videoClassName="group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6 pointer-events-none">
                     <span className="text-xs font-mono text-accent-gold mb-1">
                       16:9 WIDESCREEN COMMERCIAL
                     </span>
@@ -211,7 +216,7 @@ export default function CategoryDeepDives({ projects, onOpenModal }) {
                       {p.title}
                     </h3>
                   </div>
-                  <div className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-accent-gold text-black flex items-center justify-center opacity-90 group-hover:scale-110 transition-all shadow-xl">
+                  <div className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-accent-gold text-black flex items-center justify-center opacity-90 group-hover:scale-110 transition-all shadow-xl pointer-events-none">
                     <Play className="w-6 h-6 fill-current ml-1" />
                   </div>
                 </div>
