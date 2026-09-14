@@ -1,6 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { videoCoordinator } from '../utils/videoCoordinator';
+import { getOptimizedVideoUrl } from '../data/projects';
 
 export default function AutoplayVideo({
+  id,
   src,
   poster,
   alt = 'Video project',
@@ -8,95 +11,77 @@ export default function AutoplayVideo({
   videoClassName = '',
   imgClassName = '',
   isHovered = false,
+  muted = true,
+  onPlayChange = null,
 }) {
   const containerRef = useRef(null);
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasLoadedData, setHasLoadedData] = useState(false);
+
+  const videoId = id || src;
+  const optimizedSrc = getOptimizedVideoUrl(src);
 
   useEffect(() => {
     const container = containerRef.current;
     const video = videoRef.current;
     if (!container || !video) return;
 
-    // Ensure DOM properties are set before playback
-    video.muted = true;
+    video.muted = muted;
     video.playsInline = true;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!videoRef.current) return;
+    const handleStateChange = (playing) => {
+      setIsPlaying(playing);
+      if (onPlayChange) onPlayChange(playing);
+    };
 
-          // When approximately 50% or more visible: play muted
-          if (entry.intersectionRatio >= 0.5) {
-            videoRef.current.muted = true;
-            videoRef.current.playsInline = true;
-
-            const playPromise = videoRef.current.play();
-            if (playPromise !== undefined) {
-              playPromise
-                .then(() => {
-                  setIsPlaying(true);
-                })
-                .catch(() => {
-                  // Safely handle browser autoplay policy restriction without console errors
-                });
-            }
-          }
-          // When less than approximately 20% visible: pause
-          else if (entry.intersectionRatio < 0.2) {
-            videoRef.current.pause();
-            setIsPlaying(false);
-          }
-        });
-      },
-      {
-        threshold: [0.2, 0.5],
-      }
-    );
-
-    observer.observe(container);
+    videoCoordinator.register(videoId, container, video, handleStateChange);
 
     return () => {
-      observer.disconnect();
-      if (videoRef.current) {
-        videoRef.current.pause();
-      }
+      videoCoordinator.unregister(videoId);
     };
-  }, []);
+  }, [videoId, muted, onPlayChange]);
 
-  // Also handle hover if passed
+  // Handle hover priority
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
     if (isHovered && !isPlaying) {
-      video.muted = true;
-      video.playsInline = true;
-      video.play().then(() => setIsPlaying(true)).catch(() => {});
+      videoCoordinator.play(videoId, true);
     }
-  }, [isHovered, isPlaying]);
+  }, [isHovered, isPlaying, videoId]);
+
+  // Sync muted prop if changed externally
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = muted;
+    }
+  }, [muted]);
 
   return (
-    <div ref={containerRef} className={`relative w-full h-full overflow-hidden ${className}`}>
-      {/* Poster Image: Always in DOM as fallback and instant display */}
+    <div
+      ref={containerRef}
+      className={`relative w-full h-full overflow-hidden bg-cinema-950 ${className}`}
+    >
+      {/* Poster Image */}
       <img
         src={poster}
         alt={alt}
         loading="lazy"
-        className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 ${imgClassName}`}
+        className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 select-none ${imgClassName} ${
+          isPlaying && hasLoadedData ? 'opacity-0' : 'opacity-100'
+        }`}
       />
 
-      {/* HTML5 Video with IntersectionObserver playback control */}
+      {/* Optimized Cloudinary Video */}
       <video
         ref={videoRef}
-        src={src}
-        muted
+        src={optimizedSrc}
+        muted={muted}
         loop
         playsInline
         preload="metadata"
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 pointer-events-none ${
-          isPlaying || isHovered ? 'opacity-100' : 'opacity-0'
+        onLoadedData={() => setHasLoadedData(true)}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 pointer-events-none select-none ${
+          isPlaying ? 'opacity-100' : 'opacity-0'
         } ${videoClassName}`}
       />
     </div>

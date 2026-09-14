@@ -46,7 +46,7 @@ export default function CategoryDeepDives({ projects, onOpenModal }) {
                 href="#work"
                 className="inline-flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-accent-gold hover:text-white transition-colors"
               >
-                <span>EXPLORE ALL 19 MARKETING EDITS</span>
+                <span>EXPLORE ALL 18 MARKETING EDITS</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -60,6 +60,7 @@ export default function CategoryDeepDives({ projects, onOpenModal }) {
                   className="group relative aspect-[9/16] rounded-2xl overflow-hidden cursor-pointer border border-white/10 hover:border-accent-gold/60 transition-all hover:scale-102 bg-cinema-900"
                 >
                   <AutoplayVideo
+                    id={p.id}
                     src={p.videoUrl}
                     poster={p.posterUrl}
                     alt={p.title}
@@ -111,6 +112,7 @@ export default function CategoryDeepDives({ projects, onOpenModal }) {
                 className="group relative aspect-[9/16] max-h-[480px] rounded-2xl overflow-hidden cursor-pointer border border-white/10 hover:border-accent-cyan/60 transition-all hover:scale-102 bg-cinema-900"
               >
                 <AutoplayVideo
+                  id={p.id}
                   src={p.videoUrl}
                   poster={p.posterUrl}
                   alt={p.title}
@@ -163,6 +165,7 @@ export default function CategoryDeepDives({ projects, onOpenModal }) {
                 className="group relative aspect-[9/16] max-h-[480px] rounded-2xl overflow-hidden cursor-pointer border border-white/10 hover:border-accent-gold/60 transition-all hover:scale-102 bg-cinema-900"
               >
                 <AutoplayVideo
+                  id={p.id}
                   src={p.videoUrl}
                   poster={p.posterUrl}
                   alt={p.title}
@@ -202,6 +205,7 @@ export default function CategoryDeepDives({ projects, onOpenModal }) {
                   className="group relative aspect-video rounded-3xl overflow-hidden cursor-pointer border border-white/15 hover:border-accent-gold/60 transition-all shadow-2xl bg-black"
                 >
                   <AutoplayVideo
+                    id={p.id}
                     src={p.videoUrl}
                     poster={p.posterUrl}
                     alt={p.title}

@@ -27,19 +27,23 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-cinema-950/80 backdrop-blur-xl border-b border-white/10 py-3.5 shadow-2xl'
-          : 'bg-transparent py-5 md:py-7'
+          ? 'bg-cinema-950/85 backdrop-blur-xl border-b border-white/10 py-3 shadow-2xl'
+          : 'bg-transparent py-5 md:py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo with Profile Photo Avatar */}
         <a
           href="#hero"
           className="flex items-center gap-3 group"
           aria-label="Thiru Home"
         >
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-cinema-800 to-cinema-900 border border-white/15 flex items-center justify-center group-hover:border-accent-gold/60 transition-all duration-300">
-            <Film className="w-5 h-5 text-accent-gold group-hover:rotate-12 transition-transform duration-300" />
+          <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border-2 border-accent-gold/70 group-hover:border-accent-gold transition-all duration-300 shadow-md group-hover:scale-105">
+            <img
+              src="/profile pic/thiru_profile.jpg"
+              alt="Thiru"
+              className="w-full h-full object-cover object-top"
+            />
           </div>
           <div>
             <span className="font-display font-extrabold text-lg sm:text-xl tracking-wider text-white group-hover:text-accent-gold transition-colors">
@@ -52,7 +56,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1 bg-cinema-900/60 backdrop-blur-md border border-white/5 rounded-full px-4 py-1.5">
+        <nav className="hidden lg:flex items-center gap-1 bg-cinema-900/70 backdrop-blur-md border border-white/10 rounded-full px-4 py-1.5 shadow-lg">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -70,14 +74,14 @@ export default function Navbar() {
             href="https://wa.me/919345313552"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2.5 rounded-full bg-cinema-900/80 border border-white/10 hover:border-emerald-500/50 text-cinema-300 hover:text-emerald-400 transition-all"
+            className="p-2.5 rounded-full bg-cinema-900/80 border border-white/10 hover:border-emerald-500/50 text-cinema-300 hover:text-emerald-400 transition-all shadow-md"
             title="WhatsApp Thiru"
           >
             <MessageSquare className="w-4 h-4" />
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-accent-gold text-black hover:bg-white transition-all duration-300 shadow-lg hover:shadow-accent-gold/20 active:scale-95"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-accent-gold text-black hover:bg-white transition-all duration-300 shadow-lg hover:shadow-accent-gold/20 active:scale-95 font-display"
           >
             <span>LET'S TALK</span>
             <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -88,7 +92,7 @@ export default function Navbar() {
         <div className="flex sm:hidden items-center gap-2">
           <a
             href="#contact"
-            className="px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wider bg-accent-gold text-black"
+            className="px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wider bg-accent-gold text-black font-display"
           >
             LET'S TALK
           </a>
@@ -104,7 +108,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="sm:hidden bg-cinema-950/95 backdrop-blur-2xl border-b border-white/10 px-6 py-6 transition-all duration-300">
+        <div className="sm:hidden bg-cinema-950/95 backdrop-blur-2xl border-b border-white/10 px-6 py-6 transition-all duration-300 animate-fade-in">
           <nav className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <a
@@ -131,7 +135,7 @@ export default function Navbar() {
                 className="w-full py-3 rounded-xl bg-cinema-800 border border-white/10 text-white text-center text-xs font-bold tracking-wider uppercase flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4" />
-                CALL 9345313552
+                CALL +91 93453 13552
               </a>
             </div>
           </nav>

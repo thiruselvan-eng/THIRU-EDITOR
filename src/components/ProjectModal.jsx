@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import CustomVideoPlayer from './CustomVideoPlayer';
 import { X, ChevronLeft, ChevronRight, CheckCircle2, Film, Layers, Monitor, Sliders, ArrowUpRight } from 'lucide-react';
+import { videoCoordinator } from '../utils/videoCoordinator';
 
 export default function ProjectModal({
   project,
@@ -9,6 +10,8 @@ export default function ProjectModal({
   onPrev,
 }) {
   useEffect(() => {
+    videoCoordinator.pauseAll();
+
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose();
       if (e.key === 'ArrowRight' && onNext) onNext();
