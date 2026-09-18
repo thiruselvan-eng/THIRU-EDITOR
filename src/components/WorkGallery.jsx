@@ -37,7 +37,7 @@ export default function WorkGallery({ projects, onOpenModal }) {
             </h2>
           </div>
           <p className="text-sm sm:text-base text-cinema-400 max-w-md font-sans leading-relaxed">
-            Explore 34 authentic editing projects across VFX, political campaigns, event highlights, and digital marketing reels.
+            Explore 24 authentic editing projects across digital marketing reels, event highlights, and commercial VFX.
           </p>
         </div>
 

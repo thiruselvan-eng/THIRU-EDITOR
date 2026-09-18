@@ -46,8 +46,6 @@ export default function ProjectCard({ project, onOpenModal }) {
     switch (cat) {
       case 'vfx':
         return 'text-amber-300 border-amber-500/40 bg-amber-950/70';
-      case 'political':
-        return 'text-cyan-300 border-cyan-500/40 bg-cyan-950/70';
       case 'events':
         return 'text-emerald-300 border-emerald-500/40 bg-emerald-950/70';
       case 'digital':

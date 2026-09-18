@@ -12,7 +12,7 @@ export default function Contact() {
 
   const handleSubmitWhatsApp = (e) => {
     e.preventDefault();
-    const text = `Hi Thiru! I saw your video editor portfolio.
+    const text = `Hi Thiruvengadam! I saw your video editor portfolio.
 Name: ${formData.name || 'Not provided'}
 Contact: ${formData.contact || 'Not provided'}
 Project Type: ${formData.projectType}
@@ -25,7 +25,7 @@ Message: ${formData.message || 'I would like to discuss a video project.'}`;
   const handleSubmitEmail = (e) => {
     e.preventDefault();
     const subject = encodeURIComponent(`Video Editing Inquiry: ${formData.projectType} - ${formData.name}`);
-    const body = encodeURIComponent(`Hi Thiru,
+    const body = encodeURIComponent(`Hi Thiruvengadam,
 
 Name: ${formData.name}
 Contact: ${formData.contact}
@@ -215,7 +215,6 @@ ${formData.message}`);
                     <option value="Social Media / Reels">Social Media / High-Retention Reels</option>
                     <option value="Digital Marketing & Ads">Digital Marketing & Brand Ads</option>
                     <option value="Event Highlights & Decor">Event Highlights & Decor Aftermovie</option>
-                    <option value="Political Campaign Videos">Political Campaign Content Production</option>
                     <option value="VFX & Screen Replacement">VFX, Screen Replacement & Commercial</option>
                     <option value="Cinematic Mood Edit">Cinematic Mood Edit / Other</option>
                   </select>

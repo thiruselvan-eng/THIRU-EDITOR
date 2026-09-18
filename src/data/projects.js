@@ -1,7 +1,7 @@
 /**
- * Complete Project Data Catalog for Thiru — Video Editor Portfolio
- * 34 Authentic Video Projects delivered via Cloudinary CDN across:
- * VFX, Political Campaign, Event Management, and Digital Marketing
+ * Complete Project Data Catalog for Thiruvengadam — Video Editor Portfolio
+ * 24 Authentic Video Projects delivered via Cloudinary CDN across:
+ * Digital Marketing, Events, and VFX
  */
 
 export const getOptimizedVideoUrl = (url) => {
@@ -38,260 +38,6 @@ export const PROJECTS_DATA = [
     durationSec: 42.2,
     sizeMb: 5.53,
     featured: true
-  },
-
-  // ==========================================
-  // POLITICAL CAMPAIGN (10 Projects)
-  // ==========================================
-  {
-    id: "thiru-pol-01",
-    title: "Sathiya Campaign — Booth & Rally Highlights (April 13)",
-    filename: "SATHIYA_CAMPING_13_APRIL.mp4",
-    category: "POLITICAL CAMPAIGN",
-    filterCategory: "political",
-    categoryLabel: "Political Campaign",
-    videoUrl: "https://res.cloudinary.com/gz110d8f/video/upload/v1789402093/SATHIYA_CAMPING_13_APRIL.mp4",
-    posterUrl: "/posters/thumb_32_SATHIYA_CAMPING_13_APRIL.jpg",
-    description: "High-voltage political field coverage blending slow-motion supporter welcomes, high-energy crowd pans, and bold Tamil kinetic title overlays.",
-    techniques: [
-      "Rally Montage Pacing",
-      "Tamil Kinetic Typography",
-      "Sound Design & Cheering",
-      "Dynamic Speed Ramping"
-    ],
-    orientation: "vertical",
-    aspectRatio: "9:16",
-    resolution: "1080 × 1920",
-    fps: 30.0,
-    duration: "0:47",
-    durationSec: 47.16,
-    sizeMb: 111.45,
-    featured: true
-  },
-  {
-    id: "thiru-pol-02",
-    title: "Rajesh Campaign — Mega Rally & Flag March (April 20)",
-    filename: "RAJESH_CAMPIGN_APRIL_20_-_4.mp4",
-    category: "POLITICAL CAMPAIGN",
-    filterCategory: "political",
-    categoryLabel: "Political Campaign",
-    videoUrl: "https://res.cloudinary.com/gz110d8f/video/upload/v1789402089/RAJESH_CAMPIGN_APRIL_20_-_4.mp4",
-    posterUrl: "/posters/thumb_26_RAJESH_CAMPIGN_APRIL_20_-_4.jpg",
-    description: "Grand campaign procession edit capturing motorcade processions, candidate garlands, and heavy crowd momentum on beat cuts.",
-    techniques: [
-      "Procession Flow Cuts",
-      "Vibrant Street Grading",
-      "Bass-Boosted Audio Sync",
-      "Garland Slow-Motion"
-    ],
-    orientation: "vertical",
-    aspectRatio: "9:16",
-    resolution: "1080 × 1920",
-    fps: 30.0,
-    duration: "0:39",
-    durationSec: 39.4,
-    sizeMb: 85.34,
-    featured: false
-  },
-  {
-    id: "thiru-pol-03",
-    title: "Rajesh Campaign — Sunset Public Address (April 13 Evening)",
-    filename: "RAAJESH_CAMPING_13_APRIL_EVENING_POST.mp4",
-    category: "POLITICAL CAMPAIGN",
-    filterCategory: "political",
-    categoryLabel: "Political Campaign",
-    videoUrl: "https://res.cloudinary.com/gz110d8f/video/upload/v1789402079/RAAJESH_CAMPING_13_APRIL_EVENING_POST.mp4",
-    posterUrl: "/posters/thumb_24_RAAJESH_CAMPING_13_APRIL_EVENING_POST.jpg",
-    description: "Evening twilight campaign rally featuring flare lighting, mic speech synchronization, and high-contrast dramatic night grading.",
-    techniques: [
-      "Night Lighting Balance",
-      "Speech Beat Sync",
-      "Dramatic Flare Accents",
-      "Call-to-Action Outro"
-    ],
-    orientation: "vertical",
-    aspectRatio: "9:16",
-    resolution: "1080 × 1920",
-    fps: 30.0,
-    duration: "0:36",
-    durationSec: 36.6,
-    sizeMb: 87.21,
-    featured: false
-  },
-  {
-    id: "thiru-pol-04",
-    title: "Rajesh Campaign — Community Doorstep Outreach (April 16)",
-    filename: "RAJESH_CAMPING_APEIL_16_POST__.mp4",
-    category: "POLITICAL CAMPAIGN",
-    filterCategory: "political",
-    categoryLabel: "Political Campaign",
-    videoUrl: "https://res.cloudinary.com/gz110d8f/video/upload/v1789402030/RAJESH_CAMPING_APEIL_16_POST__.mp4",
-    posterUrl: "/posters/thumb_27_RAJESH_CAMPING_APEIL_16_POST__.jpg",
-    description: "Intimate voter connect reel showing elder blessings, handshakes, and street interactions paced for emotional connection.",
-    techniques: [
-      "Emotional Pacing",
-      "Natural Color Balance",
-      "Dialogue Clarity",
-      "Subtle Background Score"
-    ],
-    orientation: "vertical",
-    aspectRatio: "9:16",
-    resolution: "1080 × 1920",
-    fps: 30.0,
-    duration: "0:43",
-    durationSec: 43.1,
-    sizeMb: 99.4,
-    featured: false
-  },
-  {
-    id: "thiru-pol-05",
-    title: "Sathiya Campaign — Official Campaign Anthem & Music Video",
-    filename: "SATHAYA_OFFICAL_SONG.mp4",
-    category: "POLITICAL CAMPAIGN",
-    filterCategory: "political",
-    categoryLabel: "Political Campaign",
-    videoUrl: "https://res.cloudinary.com/gz110d8f/video/upload/v1789402009/SATHAYA_OFFICAL_SONG.mp4",
-    posterUrl: "/posters/thumb_31_SATHAYA_OFFICAL_SONG.jpg",
-    description: "Flagship musical anthem video synchronized with EVM voting awareness, candidate milestones, and viral social hooks.",
-    techniques: [
-      "Anthem Beat Matching",
-      "EVM Motion Graphic",
-      "Candidate Montage Flow",
-      "High-Energy Lyric Timing"
-    ],
-    orientation: "vertical",
-    aspectRatio: "9:16",
-    resolution: "1080 × 1920",
-    fps: 30.0,
-    duration: "0:58",
-    durationSec: 58.12,
-    sizeMb: 142.6,
-    featured: true
-  },
-  {
-    id: "thiru-pol-06",
-    title: "Sathiya Campaign — Youth Rally & Stage Momentum",
-    filename: "SATHAYA_OFFICAL_2.mp4",
-    category: "POLITICAL CAMPAIGN",
-    filterCategory: "political",
-    categoryLabel: "Political Campaign",
-    videoUrl: "https://res.cloudinary.com/gz110d8f/video/upload/v1789402005/SATHAYA_OFFICAL_2.mp4",
-    posterUrl: "/posters/thumb_29_SATHAYA_OFFICAL_2.jpg",
-    description: "Punchy short-form dispatch focusing on student wing support, applause tracks, and stage presence.",
-    techniques: [
-      "Rapid Cut Timing",
-      "Crowd Roar Sound Mix",
-      "Glow Highlight FX",
-      "Lower Third Badging"
-    ],
-    orientation: "vertical",
-    aspectRatio: "9:16",
-    resolution: "1080 × 1920",
-    fps: 30.0,
-    duration: "0:31",
-    durationSec: 31.5,
-    sizeMb: 68.3,
-    featured: false
-  },
-  {
-    id: "thiru-pol-07",
-    title: "Sathiya Campaign — Grand Finale Eve Rally (April 19)",
-    filename: "SATHAYA_OFFICAL_APRIL_19.mp4",
-    category: "POLITICAL CAMPAIGN",
-    filterCategory: "political",
-    categoryLabel: "Political Campaign",
-    videoUrl: "https://res.cloudinary.com/gz110d8f/video/upload/v1789402001/SATHAYA_OFFICAL_APRIL_19.mp4",
-    posterUrl: "/posters/thumb_30_SATHAYA_OFFICAL_APRIL_19.jpg",
-    description: "Campaign finale showcase featuring sea-of-supporters drone perspectives, open-top vehicle movement, and victory anthem pacing.",
-    techniques: [
-      "Drone Track Cutting",
-      "Speed Variation FX",
-      "Gold Tone Enhancement",
-      "Grand Finale Climax"
-    ],
-    orientation: "vertical",
-    aspectRatio: "9:16",
-    resolution: "1080 × 1920",
-    fps: 30.0,
-    duration: "0:52",
-    durationSec: 52.4,
-    sizeMb: 119.8,
-    featured: false
-  },
-  {
-    id: "thiru-pol-08",
-    title: "Sathiya Campaign — Constituency Manifesto Overview",
-    filename: "SATHAY_OFFICAL.mp4",
-    category: "POLITICAL CAMPAIGN",
-    filterCategory: "political",
-    categoryLabel: "Political Campaign",
-    videoUrl: "https://res.cloudinary.com/gz110d8f/video/upload/v1789401992/SATHAY_OFFICAL.mp4",
-    posterUrl: "/posters/thumb_28_SATHAY_OFFICAL.jpg",
-    description: "Informative campaign dispatch combining speech soundbites with developmental promise highlights and clean typography.",
-    techniques: [
-      "Speech Pacing",
-      "Promise Highlight Cards",
-      "Acoustic Voice Isolation",
-      "Constituency Branding"
-    ],
-    orientation: "vertical",
-    aspectRatio: "9:16",
-    resolution: "1080 × 1920",
-    fps: 30.0,
-    duration: "0:44",
-    durationSec: 44.0,
-    sizeMb: 97.5,
-    featured: false
-  },
-  {
-    id: "thiru-pol-09",
-    title: "Rajesh Campaign — Afternoon Town Hall & Speech (April 14)",
-    filename: "RAJESH_CAMPAIGN_APRL_14_OFFL_POST_3.mp4",
-    category: "POLITICAL CAMPAIGN",
-    filterCategory: "political",
-    categoryLabel: "Political Campaign",
-    videoUrl: "https://res.cloudinary.com/gz110d8f/video/upload/v1789401990/RAJESH_CAMPAIGN_APRL_14_OFFL_POST_3.mp4",
-    posterUrl: "/posters/thumb_25_RAJESH_CAMPAIGN_APRL_14_OFFL_POST_3.jpg",
-    description: "Townhall assembly recap highlighting citizen interactions, applause cues, and seamless multi-clip transitions.",
-    techniques: [
-      "Multi-Angle Assembly",
-      "Dynamic Zoom Cuts",
-      "Applause Sound Foley",
-      "Punchy Text Callouts"
-    ],
-    orientation: "vertical",
-    aspectRatio: "9:16",
-    resolution: "1080 × 1920",
-    fps: 30.0,
-    duration: "0:38",
-    durationSec: 38.2,
-    sizeMb: 82.1,
-    featured: false
-  },
-  {
-    id: "thiru-pol-10",
-    title: "Rajesh Campaign — Morning Padayatra & Citizen Walk (April 14)",
-    filename: "rajesh_camping_14_APRIL_MORNING.mp4",
-    category: "POLITICAL CAMPAIGN",
-    filterCategory: "political",
-    categoryLabel: "Political Campaign",
-    videoUrl: "https://res.cloudinary.com/gz110d8f/video/upload/v1789401980/rajesh_camping_14_APRIL_MORNING.mp4",
-    posterUrl: "/posters/thumb_33_rajesh_camping_14_APRIL_MORNING.jpg",
-    description: "Early morning padayatra documentation showcasing candid neighborhood walking shots, tea-stall visits, and sunrise lighting.",
-    techniques: [
-      "Candid Flow Pacing",
-      "Morning Light Grading",
-      "Handheld Stabilization",
-      "Ambient Street Foley"
-    ],
-    orientation: "vertical",
-    aspectRatio: "9:16",
-    resolution: "1080 × 1920",
-    fps: 30.0,
-    duration: "0:41",
-    durationSec: 41.7,
-    sizeMb: 94.2,
-    featured: false
   },
 
   // ==========================================
@@ -879,11 +625,10 @@ export const PROJECTS_DATA = [
 ];
 
 export const CATEGORIES = [
-  { id: 'all', label: 'ALL WORK', count: 34 },
-  { id: 'vfx', label: 'VFX', count: 1 },
-  { id: 'political', label: 'POLITICAL CAMPAIGN', count: 10 },
-  { id: 'events', label: 'EVENT MANAGEMENT', count: 5 },
-  { id: 'digital', label: 'DIGITAL MARKETING', count: 18 }
+  { id: 'all', label: 'ALL WORK', count: 24 },
+  { id: 'digital', label: 'DIGITAL MARKETING', count: 18 },
+  { id: 'events', label: 'EVENTS', count: 5 },
+  { id: 'vfx', label: 'VFX', count: 1 }
 ];
 
 export const FEATURED_SHOWREELS = [
@@ -909,16 +654,6 @@ export const FEATURED_SHOWREELS = [
   },
   {
     id: 'showreel-03',
-    title: 'Campaign Anthem & EVM Awareness Reel',
-    category: 'Political Campaign',
-    videoUrl: 'https://res.cloudinary.com/gz110d8f/video/upload/v1789402009/SATHAYA_OFFICAL_SONG.mp4',
-    posterUrl: '/posters/thumb_31_SATHAYA_OFFICAL_SONG.jpg',
-    aspectRatio: '9:16',
-    description: 'High-energy campaign anthem synchronized with musical beat cutting and animated EVM machine instructional graphics.',
-    badge: 'High-Energy Pacing'
-  },
-  {
-    id: 'showreel-04',
     title: 'Ayisha Furniture — Living Room Showcase',
     category: 'Digital Marketing',
     videoUrl: 'https://res.cloudinary.com/gz110d8f/video/upload/v1789402516/af2_final_.mp4',

@@ -36,18 +36,18 @@ export default function Navbar() {
         <a
           href="#hero"
           className="flex items-center gap-3 group"
-          aria-label="Thiru Home"
+          aria-label="Thiruvengadam Home"
         >
           <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border-2 border-accent-gold/70 group-hover:border-accent-gold transition-all duration-300 shadow-md group-hover:scale-105">
             <img
               src="/profile pic/thiru_profile.jpg"
-              alt="Thiru"
+              alt="Thiruvengadam"
               className="w-full h-full object-cover object-top"
             />
           </div>
           <div>
             <span className="font-display font-extrabold text-lg sm:text-xl tracking-wider text-white group-hover:text-accent-gold transition-colors">
-              THIRU
+              THIRUVENGADAM
             </span>
             <span className="hidden sm:inline-block ml-2 text-[10px] font-mono tracking-widest uppercase text-cinema-400 border-l border-cinema-700 pl-2">
               Video Editor
@@ -75,7 +75,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className="p-2.5 rounded-full bg-cinema-900/80 border border-white/10 hover:border-emerald-500/50 text-cinema-300 hover:text-emerald-400 transition-all shadow-md"
-            title="WhatsApp Thiru"
+            title="WhatsApp Thiruvengadam"
           >
             <MessageSquare className="w-4 h-4" />
           </a>

@@ -21,7 +21,7 @@ export default function WhyWorkWithMe() {
     {
       icon: <Scissors className="w-5 h-5 text-accent-gold" />,
       title: "Multiple Editing Styles",
-      desc: "Fluidly adapting between snappy social reels, grand wedding elegance, broadcast commercials, and political dispatches."
+      desc: "Fluidly adapting between snappy social reels, grand wedding elegance, brand promos, and broadcast commercials."
     },
     {
       icon: <Smartphone className="w-5 h-5 text-accent-gold" />,

@@ -56,13 +56,13 @@ export default function App() {
         {/* 3. Featured Flagship Showreel */}
         <Showreel />
 
-        {/* 4. Selected Work Gallery (All 35 Projects) */}
+        {/* 4. Selected Work Gallery (All 24 Projects) */}
         <WorkGallery
           projects={PROJECTS_DATA}
           onOpenModal={handleOpenModal}
         />
 
-        {/* 5. Category Deep Dives (Marketing, Political, Events, VFX) */}
+        {/* 5. Category Deep Dives (Marketing, Events, VFX) */}
         <CategoryDeepDives
           projects={PROJECTS_DATA}
           onOpenModal={handleOpenModal}

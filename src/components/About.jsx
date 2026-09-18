@@ -16,7 +16,7 @@ export default function About() {
               <div className="relative w-full aspect-[4/5] sm:aspect-square rounded-2xl overflow-hidden mb-6 border border-white/15 shadow-2xl group">
                 <img
                   src="/profile pic/thiru_profile.jpg"
-                  alt="Thiru - Video Editor"
+                  alt="Thiruvengadam - Video Editor"
                   className="w-full h-full object-cover object-top filter brightness-105 contrast-105 group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
@@ -37,7 +37,7 @@ export default function About() {
                 LEAD POST-PRODUCTION SPECIALIST
               </span>
               <h3 className="text-3xl font-display font-black text-white uppercase tracking-tight mb-1">
-                THIRU
+                THIRUVENGADAM
               </h3>
               <p className="text-sm font-mono text-cinema-300 mb-6">
                 Video Editor & Visual Content Creator
@@ -50,7 +50,7 @@ export default function About() {
                 </div>
                 <div className="flex items-center justify-between text-xs font-mono">
                   <span className="text-cinema-400">Specialities:</span>
-                  <span className="text-white font-semibold">Reels, Campaigns, Events, VFX</span>
+                  <span className="text-white font-semibold">Digital Marketing, Events, VFX</span>
                 </div>
                 <div className="flex items-center justify-between text-xs font-mono">
                   <span className="text-cinema-400">Deliverables:</span>
@@ -82,7 +82,7 @@ export default function About() {
             </p>
 
             <p className="text-sm sm:text-base text-cinema-400 font-sans leading-relaxed mb-8">
-              My work spans a versatile spectrum of video genres — from fast-paced digital marketing reels and brand advertisements to public-scale political campaigns, grand event highlights, commercial VFX compositing, and cinematic storytelling cuts. Rather than applying a single repetitive template, I engineer custom visual pacing and acoustic rhythm for every individual brief.
+              My work spans a versatile spectrum of video genres — from fast-paced digital marketing reels and brand advertisements to grand event highlights, commercial VFX compositing, and cinematic storytelling cuts. Rather than applying a single repetitive template, I engineer custom visual pacing and acoustic rhythm for every individual brief.
             </p>
 
             {/* Editing Genres Badges */}
@@ -90,7 +90,7 @@ export default function About() {
               {[
                 'Digital Marketing Ads',
                 'Instagram Reels & Shorts',
-                'Political Campaign Videos',
+                'Commercial Brand Ads',
                 'Event & Decor Highlights',
                 'VFX & Compositing',
                 'Cinematic Mood Edits'

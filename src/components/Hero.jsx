@@ -81,12 +81,12 @@ export default function Hero({ onExploreWork }) {
 
             {/* Name & Role Secondary Subtitle */}
             <p className="text-lg sm:text-2xl md:text-3xl font-light text-cinema-100 tracking-tight max-w-2xl mb-4 font-display">
-              I'm <span className="font-extrabold text-accent-gold tracking-wide">THIRU</span> — Professional Video Editor & Content Creator
+              I'm <span className="font-extrabold text-accent-gold tracking-wide">THIRUVENGADAM</span> — Professional Video Editor & Content Creator
             </p>
 
             {/* Pitch & Philosophy */}
             <p className="text-sm sm:text-base md:text-lg text-cinema-300/90 max-w-xl mb-6 leading-relaxed font-sans font-light">
-              Turning ideas into high-retention visual stories. Specializing in commercial VFX, viral political campaign reels, grand event highlights, and digital marketing advertisements.
+              Turning ideas into high-retention visual stories. Specializing in digital marketing advertisements, grand event highlights, and commercial VFX.
             </p>
 
             {/* Social / Direct Connect Quick Bar */}
@@ -136,7 +136,7 @@ export default function Hero({ onExploreWork }) {
                 className="w-full sm:w-auto px-7 sm:px-8 py-3.5 sm:py-4 rounded-full bg-accent-gold text-black font-display font-bold text-xs sm:text-sm tracking-widest uppercase hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl shadow-accent-gold/20 flex items-center justify-center gap-2.5 group"
               >
                 <Play className="w-4 h-4 fill-current group-hover:translate-x-0.5 transition-transform" />
-                <span>VIEW MY WORK (34 EDITS)</span>
+                <span>VIEW MY WORK (24 EDITS)</span>
               </a>
 
               <a
@@ -149,13 +149,11 @@ export default function Hero({ onExploreWork }) {
 
             {/* Quick Discipline Tags */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 text-[11px] sm:text-xs font-mono text-cinema-400">
-              <span className="px-3 py-1 rounded-md bg-cinema-900/80 border border-white/5">VFX & Screen Replacement</span>
-              <span className="text-cinema-700 hidden sm:inline">•</span>
-              <span className="px-3 py-1 rounded-md bg-cinema-900/80 border border-white/5">Political Campaigns</span>
+              <span className="px-3 py-1 rounded-md bg-cinema-900/80 border border-white/5">Digital Marketing</span>
               <span className="text-cinema-700 hidden sm:inline">•</span>
               <span className="px-3 py-1 rounded-md bg-cinema-900/80 border border-white/5">Event Highlights</span>
               <span className="text-cinema-700 hidden sm:inline">•</span>
-              <span className="px-3 py-1 rounded-md bg-cinema-900/80 border border-white/5">Digital Marketing</span>
+              <span className="px-3 py-1 rounded-md bg-cinema-900/80 border border-white/5">VFX & Commercials</span>
             </div>
           </div>
 
@@ -173,7 +171,7 @@ export default function Hero({ onExploreWork }) {
                 <div className="w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] md:w-[320px] md:h-[320px] lg:w-[360px] lg:h-[360px] xl:w-[400px] xl:h-[400px] aspect-square rounded-[22px] sm:rounded-[26px] overflow-hidden bg-cinema-950 border border-white/20 relative shadow-inner">
                   <img
                     src="/profile pic/thiru_profile.jpg"
-                    alt="Thiru - Professional Video Editor"
+                    alt="Thiruvengadam - Professional Video Editor"
                     className="w-full h-full object-cover object-top filter brightness-105 contrast-105 transition-transform duration-700 group-hover:scale-105 select-none"
                     loading="eager"
                   />
@@ -188,7 +186,7 @@ export default function Hero({ onExploreWork }) {
                       Available for Hire
                     </span>
                     <span className="px-2.5 py-1 rounded-full bg-accent-gold text-black font-display font-black text-[10px] uppercase tracking-wider shadow-lg">
-                      THIRU
+                      THIRUVENGADAM
                     </span>
                   </div>
                 </div>

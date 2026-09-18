@@ -17,7 +17,7 @@ export default function Footer() {
             </div>
             <div>
               <span className="text-xl font-display font-black tracking-wider text-white block">
-                THIRU
+                THIRUVENGADAM
               </span>
               <span className="text-[11px] font-mono tracking-wider uppercase text-cinema-400">
                 Video Editor & Visual Content Creator
@@ -49,7 +49,7 @@ export default function Footer() {
         {/* Bottom copyright row */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono">
           <p className="text-cinema-500">
-            © 2026 Thiru. All Rights Reserved.
+            © 2026 Thiruvengadam. All Rights Reserved.
           </p>
 
           <div className="flex items-center gap-4 text-cinema-400">

@@ -1,6 +1,6 @@
-# Thiru — Professional Video Editor Portfolio
+# Thiruvengadam — Professional Video Editor Portfolio
 
-A cinematic, high-performance portfolio website built specifically for **Thiru — Video Editor & Visual Content Creator**.
+A cinematic, high-performance portfolio website built specifically for **Thiruvengadam — Video Editor & Visual Content Creator**.
 
 Designed with a dark, premium aesthetic combining the best elements of a film showreel, creative agency website, and modern personal brand.
 
@@ -8,7 +8,7 @@ Designed with a dark, premium aesthetic combining the best elements of a film sh
 
 ## 🎬 Features
 
-- **35 Authentic Video Projects**: Spanning Digital Marketing (19), Event Management (5), Political Campaigns (10), and Commercial VFX (1).
+- **24 Authentic Video Projects**: Spanning Digital Marketing (18), Event Management (5), and Commercial VFX (1).
 - **Custom Cinematic Video Player**: Custom scrubber with buffer indication, timecode display, volume slider, playback speed control (1x/1.25x/1.5x), and fullscreen toggle.
 - **Instant Poster Loading**: Lightweight pre-generated poster frames ensure fast page load with zero upfront video buffering.
 - **HTTP 206 Partial Content Range Streaming**: Smooth seeking and instant scrubbing without downloading full video files.
@@ -47,7 +47,6 @@ Place video files inside the `VIDEOS/` folder structured as:
 VIDEOS/
 ├── DIGITAL MARKETING/
 ├── EVENT MANAGEMENT/
-├── POLITICAL CAMPAIGN/
 └── VFX/
 ```
 
@@ -65,4 +64,4 @@ npm run build
 ---
 
 ## 📄 License
-© 2026 Thiru. All Rights Reserved.
+© 2026 Thiruvengadam. All Rights Reserved.

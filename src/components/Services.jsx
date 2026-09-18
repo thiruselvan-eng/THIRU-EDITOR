@@ -1,5 +1,5 @@
 import React from 'react';
-import { Film, Smartphone, ShoppingBag, Megaphone, PartyPopper, Wand2, Clapperboard, ArrowUpRight } from 'lucide-react';
+import { Film, Smartphone, ShoppingBag, PartyPopper, Wand2, Clapperboard, ArrowUpRight } from 'lucide-react';
 
 export default function Services() {
   const services = [
@@ -17,11 +17,6 @@ export default function Services() {
       icon: <ShoppingBag className="w-6 h-6 text-accent-gold" />,
       title: "Digital Marketing Videos",
       description: "Creative promotional and advertising content designed for commercial brands, retail showrooms, and academies."
-    },
-    {
-      icon: <Megaphone className="w-6 h-6 text-accent-gold" />,
-      title: "Political Campaign Videos",
-      description: "Campaign-focused visual content, constituency rallies, speeches, voter awareness reels, and campaign anthems."
     },
     {
       icon: <PartyPopper className="w-6 h-6 text-accent-gold" />,
@@ -92,7 +87,7 @@ export default function Services() {
                 Need a Specialised Format?
               </h3>
               <p className="text-sm text-cinema-300 leading-relaxed">
-                Whether you need a full campaign batch, high-frequency reels, or special broadcast delivery, let's discuss your timeline and deliverables.
+                Whether you need a full marketing batch, high-frequency reels, or special broadcast delivery, let's discuss your timeline and deliverables.
               </p>
             </div>
             <a
